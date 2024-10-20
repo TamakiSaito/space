@@ -23,9 +23,9 @@ const Projects = () => {
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
         <ProjectCard
-          name="shopping"
-          src="/SpaceWebsite.png"
-          title="Shopping App Demo"
+          name="watches"
+          src="/watches-website.png"
+          title="Watches App Demo"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
       </div>

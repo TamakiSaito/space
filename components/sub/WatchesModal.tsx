@@ -2,13 +2,13 @@ import React from 'react'
 import { Modal, Box, Typography } from '@mui/material'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
-interface MoviesModalProps {
+interface WatchesModalProps {
   open: boolean
   handleClose: () => void
 }
 
-const MoviesModal: React.FC<MoviesModalProps> = ({ open, handleClose }) => {
-  const iframeUrl = 'https://movies-react-beige.vercel.app'
+const WatchesModal: React.FC<WatchesModalProps> = ({ open, handleClose }) => {
+  const iframeUrl = 'https://watches-xi.vercel.app/'
 
   const titleClick = () => {
     window.open(iframeUrl, '_blank')
@@ -18,21 +18,22 @@ const MoviesModal: React.FC<MoviesModalProps> = ({ open, handleClose }) => {
     <Modal open={open} onClose={handleClose}>
       <Box className="w-[80%] h-[80%] bg-white p-[16px] mx-auto mt-[10%] overflow-auto">
         <Box display="flex" alignItems="center">
-          <Typography 
+          <Typography
             variant="h6"
-            sx={{
-              cursor: 'pointer',
-              '&:hover': { color: 'gray' }}}
+            sx={{ 
+              cursor: 'pointer', 
+              '&:hover': { color:'gray' }
+            }}
             onClick={titleClick}
           >
             <OpenInNewIcon />
               Open in New Window.
           </Typography>
         </Box>
-        <iframe title="Movies Modal" src={iframeUrl} width="100%" height="100%"></iframe>
+        <iframe title="Watches Modal" src={iframeUrl} width="100%" height="100%"></iframe>
       </Box>
     </Modal>
   )
 }
 
-export default MoviesModal
+export default WatchesModal
